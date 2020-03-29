@@ -31,6 +31,7 @@ namespace Lab09_Manhattan
                 foreach (var item in parseData.NewYork)
                 {
                     counts++;
+
                     Console.WriteLine($"{counts}: {item.Properties.Neighborhood}");
                 }
                 Console.WriteLine();
@@ -70,8 +71,19 @@ namespace Lab09_Manhattan
                     counter++;
                     Console.WriteLine($"{counter}: {item}");
                 }
-                ////var distinctList = myList.DistinctBy( x => x.ObjectID).ToList();
+                Console.WriteLine();
 
+                var newNeighbor = parseData.NewYork
+                    .Where(p => p.Properties.Neighborhood != "")
+                    .Select(p => p.Properties.Neighborhood);
+
+                Console.WriteLine("Changeing the second question to one liner");
+                count = 0;
+                foreach (var item in newNeighbor)
+                {
+                    count++;
+                    Console.WriteLine($"{count}: {item}");
+                }
 
 
             }

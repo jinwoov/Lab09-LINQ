@@ -17,5 +17,6 @@ namespace Lab09_Manhattan.Classes
         public Properties Properties { get; set; }
 
 
+
     }
 }
