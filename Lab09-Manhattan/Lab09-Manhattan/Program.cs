@@ -21,36 +21,49 @@ namespace Lab09_Manhattan
             using (StreamReader reader = File.OpenText(@"../../../data.json"))
             {
 
-                //var serializer = new JsonSerializer();
-                //serializer.Deserialize(reader);
-                //JObject manhattan = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
-
             
                 var par = reader.ReadToEnd();
 
                 var parseData = JsonConvert.DeserializeObject<ListYork>(par);
 
+                int counts = 0;
+                Console.WriteLine("This is showing all of the neighborhood");
+                foreach (var item in parseData.NewYork)
+                {
+                    counts++;
+                    Console.WriteLine($"{counts}: {item.Properties.Neighborhood}");
+                }
+                Console.WriteLine();
 
                 var newCities =
                 from p in parseData.NewYork
                 where p.Properties.Neighborhood != ""
                 select p.Properties.Neighborhood;
 
+                Console.WriteLine("This is after trimming down null neighbors");
+                int count = 0;
+                foreach (var item in newCities)
+                {
+                    count++;
+                    Console.WriteLine($"{count}: {item}");
+                }
+                Console.WriteLine();
+
                 var newCitiess = newCities.Distinct();
-
-
-                //int count = 0;
-                //foreach (var item in newCitiess)
-                //{
-                //    count++;
-                //    Console.WriteLine($"{count}: {item}");
-                //}
+                Console.WriteLine("This is after neighborhood is cleaned out of duplicate");
+                foreach (var item in newCitiess)
+                {
+                    count++;
+                    Console.WriteLine($"{count}: {item}");
+                }
+                Console.WriteLine();
 
                 var newerCity = parseData.NewYork
                     .Where(neighbor => neighbor.Properties.Neighborhood != "")
                     .Select(neigbor => neigbor.Properties.Neighborhood)
                     .Distinct();
 
+                Console.WriteLine("This is one liner");
                 int counter = 0;
                 foreach (var item in newerCity)
                 {
