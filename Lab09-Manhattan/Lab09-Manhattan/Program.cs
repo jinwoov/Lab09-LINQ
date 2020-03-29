@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
@@ -20,12 +21,17 @@ namespace Lab09_Manhattan
             {
                 JObject manhattan = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
 
-                foreach (var item in manhattan)
-                {
-                    Console.WriteLine(item);
-                }
+                var newCities =
+                from p in manhattan["features"]
+                where (string)p["properties"]["neighborhood"] != ""
+                select p;
 
-                var neighbor = manh
+                int count = 0;
+                foreach (var item in newCities)
+                {
+                    count++;
+                Console.WriteLine($"{count}: {item}");
+                }
 
 
             }
