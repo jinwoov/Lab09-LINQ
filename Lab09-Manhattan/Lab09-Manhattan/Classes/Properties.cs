@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Lab09_Manhattan.Classes
 {
+    /// <summary>
+    /// Properties of what is in Properties object of JSON normalizing it
+    /// </summary>
     public class Properties
     {
         public int Zip { get; set; }
