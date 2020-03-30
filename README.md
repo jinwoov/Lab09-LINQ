@@ -42,10 +42,13 @@ Then select and open ```Lab09-Manhattan.sln```
 ### Visuals
 
 #### Appliation Running
-![Application](./assets/images/Application-Run.png)
+![Application](./assets/images/application-start.png)
 
-#### Unit Test
-![Unit testing pass](./assets/images/unit-testing.png)
+#### Functional Application
+![Application running](./assets/images/functional-application.png)
+
+#### Application End
+![Unit testing pass](./assets/images/application-end.png)
 
 ---
 
