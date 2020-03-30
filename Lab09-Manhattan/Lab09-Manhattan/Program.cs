@@ -10,19 +10,28 @@ namespace Lab09_Manhattan
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(@"
+            try
+            {
+                Console.WriteLine(@"
                         #=================#
                         # New York Finest #
                         #    by Jin       #
                         #=================#");
-            Console.WriteLine("Press any key to proceed this application");
-            Console.ReadLine();
-            UsingJSON();
-            Console.WriteLine("-------------------");
-            Console.WriteLine("Sorry for a lot of enters, please enjoy rest of your day");
-            Console.ReadLine();
-            Environment.Exit(0);
-
+                Console.WriteLine("Press any key to proceed this application");
+                Console.ReadLine();
+                UsingJSON();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You have created bug!");
+            }
+            finally
+            {
+                Console.WriteLine("-------------------");
+                Console.WriteLine("Sorry for a lot of enters, please enjoy rest of your day");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
         }
 
 
