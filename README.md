@@ -1,4 +1,5 @@
 # Empire State of LINQ
+----
 
 Lab 9 - LINQ
 
@@ -52,25 +53,9 @@ Then select and open ```Lab09-Manhattan.sln```
 
 ---
 
-### OOP
-OOP stands for object oriented program and it has four imperative component, includes, polymorphism, abstract, inheritance and interface. These components gives developer a powerful tool to dry the codes also create similarity to the parent and child classes. This linkage creates properties or method that is needed for particular classes and allows concrete classes share all these method thats been inherited by parent classes. The correct term for parent and child is `base` and `derived` classes. The downside of inheritance is that you can only inherit from one base and any changes you make can effect lineage following that parent. 
-
-**Inheritance**: This concept is applied in my program by having wolf, cow and bear able to walk, which was given in `Mammal` class.  
-**Polymorphism**: This is displayed through cow and rabbit. Herbivore, parent, has method for jumping which will return `Gravity is so heavy`, however with polymorphism, it will return `Hip hop Hipty hop`.  
-**Encapsulation and Abstract**: I have abstract set for all of the parents above last lineage in the tree. Most of the methods are defined abstract and scope are set to public for all of the methods for program.cs and unit testing to have access to the animal classes.  
-**Interface**: The example of interface is in the main method, but to elaborate. The `IKingOfAnimals` are implemented to `Lion` and `GreatWhiteShark` which they are stored in `IKingOfAnimals` array. Using the logic you can specify what class where it belongs to.  
-
----
-### Interface 
-Interface is a another way for you to inherit the behavior to the class and you can utilize its to group with other classes that took in inheritance from the parent class. Class that inherits interface must use methods that is in the interface. 
-
-For this Application interface is applied in Lion and have lion implement methods that are in the `ISwim` and `IKingOfAnimals`. Since lion can't swim, `ISwim` is shown console with string different from great white shark. Great white shark has both interfaces applied as well but is inherited from `Fish`. This is true as great white shark can swim and is one of the notorious king of the marine animal. 
-
 ### Change Log
-- 1.6: *Updated README and updated UML with Interface properties/methods* March 26 2020
-- 1.5: *Created a method to display four pillars of OOP* March 26 2020
-- 1.4: *Implemented interface to the classes and unit test displays pass* March 26 2020
-- 1.3: *Link classes with inheritance and unit test passes* March 26 2020
-- 1.2: *Revised existing UML to label base and derived classes* - March 26 2020
-- 1.1: *Created library of animals in the classes* - March 25 2020  
-- 1.0: *Created Repo, structuralized the application* - March 25 2020  
+- 1.4: *README is completed* March 29 2020
+- 1.3: *Method is running and able to render correct amount of outputs* March 29 2020
+- 1.2: *Added NuGet Package to implement Newtonsoft which is used to parse the JSON file* - March 29 2020
+- 1.1: *Created classes that fits the JSON file content* - March 29 2020  
+- 1.0: *Created Repo, structuralized the folder* - March 29 2020  
