@@ -54,6 +54,7 @@ Then select and open ```Lab09-Manhattan.sln```
 ---
 
 ### Change Log
+- 1.5: *Added try catch block* March 30 2020
 - 1.4: *README is completed* March 29 2020
 - 1.3: *Method is running and able to render correct amount of outputs* March 29 2020
 - 1.2: *Added NuGet Package to implement Newtonsoft which is used to parse the JSON file* - March 29 2020
