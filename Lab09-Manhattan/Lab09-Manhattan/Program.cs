@@ -32,7 +32,7 @@ namespace Lab09_Manhattan
             {
                 var par = reader.ReadToEnd();
 
-                var parseData = JsonConvert.DeserializeObject<ListYork>(par);
+                ListYork parseData = JsonConvert.DeserializeObject<ListYork>(par);
 
                 int counts = 0;
                 Console.WriteLine("This is showing all of the neighborhood");
