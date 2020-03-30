@@ -7,6 +7,6 @@ namespace Lab09_Manhattan.Classes
     public class Geometry
     {
         public string Type { get; set; }
-        public string[] Coordinates { get; set; }
+        public List<double> Coordinates { get; set; }
     }
 }
